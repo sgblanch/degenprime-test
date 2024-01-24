@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"degenprime.libexec" = ["degenprime.wasm"]
+
+[project]
+name = "degenprime-test"
+version = "0.1.1"
+dependencies = [
+    "customtkinter",
+    "CTkMessagebox",
+]
+authors = [
+  { name="Steven Blanchard", email="sgblanch@charlotte.edu" },
+]
+description = "Test python package for degenprime"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+
+[project.gui-scripts]
+degenprime-validate = "degenprime.validate:validate"
+
+[project.urls]
+Homepage = "https://github.com/sgblanch/degenprime-test"
+Issues = "https://github.com/sgblanch/degenprime-test/issues"
